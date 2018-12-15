@@ -19,7 +19,7 @@
 /* * ***************************Includes********************************* */
 require_once __DIR__  . '/../../../../core/php/core.inc.php';
 
-class template extends eqLogic {
+class twinkly extends eqLogic {
     /*     * *************************Attributs****************************** */
 
 
@@ -47,6 +47,22 @@ class template extends eqLogic {
 
       }
      */
+     
+    public static function dependancy_info() {
+		$return = array();
+		$return['log'] = 'twinkly_update';
+		$return['progress_file'] = jeedom::getTmpFolder('twinkly') . '/dependance';
+        log::add('twinkly', 'debug', 'test');
+        log::add('twinkly', 'debug', jeedom::getTmpFolder('twinkly'));
+        //log::add('twinkly', 'debug', $return['progress_file']);
+		$return['state'] = 'ok';
+		return $return;
+	}
+
+    public static function dependancy_install() {
+		log::remove(__CLASS__ . '_update');
+		return array('script' => dirname(__FILE__) . '/../../resources/install_#stype#.sh ' . jeedom::getTmpFolder('twinkly') . '/dependance', 'log' => log::getPathToLog(__CLASS__ . '_update'));
+	}
 
 
 
@@ -83,7 +99,8 @@ class template extends eqLogic {
     public function postRemove() {
         
     }
-
+    
+    
     /*
      * Non obligatoire mais permet de modifier l'affichage du widget si vous en avez besoin
       public function toHtml($_version = 'dashboard') {
@@ -106,7 +123,7 @@ class template extends eqLogic {
     /*     * **********************Getteur Setteur*************************** */
 }
 
-class templateCmd extends cmd {
+class twinklyCmd extends cmd {
     /*     * *************************Attributs****************************** */
 
 
