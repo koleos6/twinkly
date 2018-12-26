@@ -107,9 +107,9 @@ foreach (object::all() as $object) {
 		</div>
 	</div>
        <div class="form-group">
-        <label class="col-sm-3 control-label">{{template param 1}}</label>
+        <label class="col-sm-3 control-label">{{Adresse IP de la guirlande}}</label>
         <div class="col-sm-3">
-            <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="city" placeholder="param1"/>
+            <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="IPaddress" placeholder="{{Addresse IP}}"/>
         </div>
     </div>
 </fieldset>

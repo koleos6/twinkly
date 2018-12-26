@@ -52,8 +52,8 @@ class twinkly extends eqLogic {
 		$return = array();
 		$return['log'] = 'twinkly_update';
 		$return['progress_file'] = jeedom::getTmpFolder('twinkly') . '/dependance';
-        log::add('twinkly', 'debug', 'test');
-        log::add('twinkly', 'debug', jeedom::getTmpFolder('twinkly'));
+        //log::add('twinkly', 'debug', 'test');
+        //log::add('twinkly', 'debug', jeedom::getTmpFolder('twinkly'));
         //log::add('twinkly', 'debug', $return['progress_file']);
 		$return['state'] = 'ok';
 		return $return;
@@ -73,7 +73,25 @@ class twinkly extends eqLogic {
     }
 
     public function postInsert() {
+        $twinklyCmd = new twinklyCmd();
+        $twinklyCmd->setName(__('OFF', __FILE__));
+        $twinklyCmd->setEqLogic_id($this->id);
+		//$twinklyCmd->setConfiguration('key_data', 'Standby');
+		//$twinklyCmd->setConfiguration('ApiType', 'key');
+        //$twinklyCmd->setConfiguration('order', 1);
+        $twinklyCmd->setType('action');
+        $twinklyCmd->setSubType('other');
+		$twinklyCmd->save();
         
+        $twinklyCmd = new twinklyCmd();
+        $twinklyCmd->setName(__('ON', __FILE__));
+        $twinklyCmd->setEqLogic_id($this->id);
+		//$twinklyCmd->setConfiguration('key_data', 'Standby');
+		//$twinklyCmd->setConfiguration('ApiType', 'key');
+        //$twinklyCmd->setConfiguration('order', 1);
+        $twinklyCmd->setType('action');
+        $twinklyCmd->setSubType('other');
+		$twinklyCmd->save();
     }
 
     public function preSave() {
@@ -140,7 +158,34 @@ class twinklyCmd extends cmd {
      */
 
     public function execute($_options = array()) {
+        $eqLogic   = $this->getEqLogic();
+		$IPaddress = $eqLogic->getConfiguration('IPaddress');
         
+        $cmdName  = $this->getName();
+        
+        switch($cmdName) {
+            case 'OFF':
+                $cmd = 'sudo /usr/bin/python3 ' .dirname(__FILE__) . '/__main__.py --twinkly_ip '.$IPaddress.' switch_off';
+                log::add('twinkly','debug','OFF Command');
+            break;
+            case 'ON':
+                $cmd = 'sudo /usr/bin/python3 ' .dirname(__FILE__) . '/__main__.py --twinkly_ip '.$IPaddress.' switch_on';
+                log::add('twinkly','debug','ON Command');
+            break;
+            default:
+            break;
+        }
+        //$result = exec($cmd, $output, $return_var);
+        $result=trim(shell_exec($cmd));
+        //$result_json=json_decode($config,true);
+        //$request_shell = new com_shell($cmd . ' 2>&1');
+        //$result = trim($request_shell->exec());
+        
+
+        log::add('twinkly','debug',$output);
+        log::add('twinkly','debug',$cmd);
+        log::add('twinkly','debug',$result);
+        return $result;
     }
 
     /*     * **********************Getteur Setteur*************************** */
