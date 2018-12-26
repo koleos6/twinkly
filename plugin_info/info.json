@@ -1,7 +1,7 @@
 {
 	"id" : "twinkly",
 	"name" : "Twinkly",
-	"description" : "Plugin twinkly pour commande des guirelandes tkinkly",
+	"description" : "Plugin twinkly pour commander des guirelandes tkinkly",
 	"licence" : "AGPL",
 	"author" : "Koleos",
 	"require" : "3.2",
@@ -12,5 +12,5 @@
 	"changelog" : "https://jeedom.github.io/twinkly/#language#/changelog",
 	"documentation" : "https://jeedom.github.io/twinkly/#language#/",
 	"language" : ["fr_FR"],
-	"compatibility" : ["miniplus","smart","rpi","docker","diy","mobile"]
+	"compatibility" : ["miniplus","smart","rpi","docker","diy"]
 }
