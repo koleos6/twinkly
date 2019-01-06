@@ -1,5 +1,26 @@
 {
-    "plugins\/twinkly\/plugin_info\/configuration.php": {
-        "Prérequis: il faut au préalable avoir configurer via l'application Twinkly la guirlande sur le même réseau que Jeedom et lui avoir attribué une IP fixe.": "Prérequis: il faut au préalable avoir configurer via l'application Twinkly la guirlande sur le même réseau que Jeedom et lui avoir attribué une IP fixe."
+    "plugins\/twinkly\/desktop\/php\/twinkly.php": {
+        "Ajouter une guirlande": "Ajouter une guirlande",
+        "Rechercher": "Rechercher",
+        "Gestion": "Gestion",
+        "Ajouter": "Ajouter",
+        "Configuration": "Configuration",
+        "Mes Guirelandes Twinkly": "Mes Guirelandes Twinkly",
+        "Sauvegarder": "Sauvegarder",
+        "Supprimer": "Supprimer",
+        "Configuration avancée": "Configuration avancée",
+        "Equipement": "Equipement",
+        "Commandes": "Commandes",
+        "Nom de l'équipement template": "Nom de l'équipement template",
+        "Objet parent": "Objet parent",
+        "Aucun": "Aucun",
+        "Catégorie": "Catégorie",
+        "Activer": "Activer",
+        "Visible": "Visible",
+        "Adresse IP de la guirlande": "Adresse IP de la guirlande",
+        "Addresse IP": "Addresse IP",
+        "Nom": "Nom",
+        "Type": "Type",
+        "Action": "Action"
     }
 }
