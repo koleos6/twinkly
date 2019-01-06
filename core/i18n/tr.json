@@ -1,0 +1,5 @@
+{
+    "plugins\/twinkly\/plugin_info\/configuration.php": {
+        "Prérequis: il faut au préalable avoir configurer via l'application Twinkly la guirlande sur le même réseau que Jeedom et lui avoir attribué une IP fixe.": "Prérequis: il faut au préalable avoir configurer via l'application Twinkly la guirlande sur le même réseau que Jeedom et lui avoir attribué une IP fixe."
+    }
+}
