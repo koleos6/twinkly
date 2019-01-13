@@ -1,5 +1,6 @@
 function pip_install {
-	sudo pip3 install -U "$@"
+	echo "sudo pip3 install -U $@"
+    sudo pip3 install -U "$@"
 	if [ $? -ne 0 ]; then
 		echo "pi3 command not operational, try pip3.2"
         sudo pip3.2 install -U "$@"
@@ -26,9 +27,9 @@ sudo apt-get update
 echo 20 > ${PROGRESS_FILE}
 echo "***** Commande: sudo apt-get install -y python3 python3-venv python3-pip **********"
 sudo apt-get install -y python3 python3-venv python3-pip
-echo 30 > ${PROGRESS_FILE}
-echo "***** Commande: sudo pip3 install -U setuptools **********"
-sudo pip3 install -U setuptools
+#echo 30 > ${PROGRESS_FILE}
+#echo "***** Commande: sudo pip3 install -U setuptools **********"
+#pip_install setuptools
 echo 40 > ${PROGRESS_FILE}
 echo "***** Commande: cd ../../plugins/twinkly/resources/xled/ **********"
 cd ../../plugins/twinkly/resources/xled/
