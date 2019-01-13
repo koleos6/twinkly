@@ -1,7 +1,5 @@
 Twinkly 
 ==============================
-Description 
------------
 
 Plugin permettant de piloter les guirlandes Twinkly
 
