@@ -9,8 +9,8 @@
 	"hasDependency" : true,
 	"hasOwnDeamon" : false,
 	"maxDependancyInstallTime" : 0,
-	"changelog" : "https://jeedom.github.io/twinkly/#language#/changelog",
-	"documentation" : "https://jeedom.github.io/twinkly/#language#/",
+	"changelog" : "https://koleos6.github.io/twinkly/#language#/changelog",
+	"documentation" : "https://koleos6.github.io/twinkly/#language#/",
 	"language" : ["fr_FR"],
 	"compatibility" : ["miniplus","smart","rpi","docker","diy"]
 }
