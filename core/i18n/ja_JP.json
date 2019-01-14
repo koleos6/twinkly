@@ -1,26 +1,6 @@
 {
-    "plugins\/twinkly\/desktop\/php\/twinkly.php": {
-        "Ajouter une guirlande": "Ajouter une guirlande",
-        "Rechercher": "Rechercher",
-        "Gestion": "Gestion",
-        "Ajouter": "Ajouter",
-        "Configuration": "Configuration",
-        "Mes Guirelandes Twinkly": "Mes Guirelandes Twinkly",
-        "Sauvegarder": "Sauvegarder",
-        "Supprimer": "Supprimer",
-        "Configuration avancée": "Configuration avancée",
-        "Equipement": "Equipement",
-        "Commandes": "Commandes",
-        "Nom de l'équipement template": "Nom de l'équipement template",
-        "Objet parent": "Objet parent",
-        "Aucun": "Aucun",
-        "Catégorie": "Catégorie",
-        "Activer": "Activer",
-        "Visible": "Visible",
-        "Adresse IP de la guirlande": "Adresse IP de la guirlande",
-        "Addresse IP": "Addresse IP",
+    "plugins\/twinkly\/desktop\/js\/twinkly.js": {
         "Nom": "Nom",
-        "Type": "Type",
-        "Action": "Action"
+        "Tester": "Tester"
     }
 }
