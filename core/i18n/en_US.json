@@ -1,6 +1,6 @@
 {
     "plugins\/twinkly\/desktop\/js\/twinkly.js": {
-        "Nom": "Nom",
-        "Tester": "Tester"
+        "Nom": "Name",
+        "Tester": "Test"
     }
 }
