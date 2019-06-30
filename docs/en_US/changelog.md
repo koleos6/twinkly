@@ -1,3 +1,6 @@
+29/06/2019
+Migration pour Jeedom V4
+
 13/01/2019
 Modification installation des dépendances
 
