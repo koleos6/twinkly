@@ -1,4 +1,8 @@
 {
+    "plugins\/twinkly\/desktop\/js\/twinkly.js": {
+        "Nom": "Nom",
+        "Tester": "Tester"
+    },
     "plugins\/twinkly\/desktop\/php\/twinkly.php": {
         "Ajouter une guirlande": "Ajouter une guirlande",
         "Rechercher": "Rechercher",
@@ -21,6 +25,10 @@
         "Addresse IP": "Addresse IP",
         "Nom": "Nom",
         "Type": "Type",
-        "Action": "Action"
+        "Action": "Action",
+        "Dupliquer": "Dupliquer"
+    },
+    "plugins\/twinkly\/plugin_info\/configuration.php": {
+        "Prérequis: il faut au préalable avoir configuré via l'application Twinkly la guirlande sur le même réseau que Jeedom et lui avoir attribué une IP fixe.": "Prérequis: il faut au préalable avoir configuré via l'application Twinkly la guirlande sur le même réseau que Jeedom et lui avoir attribué une IP fixe."
     }
 }
